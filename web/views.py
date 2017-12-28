@@ -4,13 +4,15 @@ from django.views.generic import TemplateView
 
 
 class IndexView(TemplateView):
-    #TODO: Hookup template for the website homepage
+    #TODO: Hookup templates for the website homepage
     pass
 
 
 class SignInView(View):
+
     #TODO: first time signin using facebook, and redirects to profile view
-    pass
+    def get(self, request):
+        return render(request, 'signin.html')
 
 
 class ProfileView(View):
